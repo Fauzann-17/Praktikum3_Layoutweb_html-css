@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Web Profile | Fauzan</title>
+<style>
+  :root {
+    --bg: #f4f5f7; --card: #ffffff; --text: #222; --muted: #666;
+    --accent: #2563eb; --border: #d5d9e0; --ph: #e3e7ee;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a; --card: #1e2127; --text: #eceef2; --muted: #9aa1ad;
+      --accent: #7aa7ff; --border: #343944; --ph: #2b2f37;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif; background: var(--bg);
+    color: var(--text); line-height: 1.6; padding: 24px 16px;
+  }
+  a { color: var(--accent); }
+  .page {
+    max-width: 960px; margin: 0 auto; background: var(--card);
+    border: 1px solid var(--border); border-radius: 12px; padding: 32px;
+  }
+  
+  .header {
+    display: grid; grid-template-columns: 200px 1fr 180px;
+    gap: 28px; align-items: start;
+  }
+  .photo {
+    width: 100%; aspect-ratio: 1 / 1; background: var(--ph);
+    border: 2px solid var(--border); border-radius: 8px;
+    display: grid; place-items: center; color: var(--muted); font-size: 14px;
+  }
+  .info h1 { font-size: 2rem; margin-bottom: 8px; }
+  .info p { color: var(--muted); }
+  .info dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 16px; margin-top: 8px; }
+  .info dt { font-weight: 600; }
+  .categories { text-align: right; }
+  .categories h3 { text-decoration: underline; font-size: 1rem; margin-bottom: 6px; }
+  .categories li { list-style: none; color: var(--muted); }
+  
+  .about { margin: 32px 0; display: grid; gap: 16px; }
+  
+  .media { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .box {
+    border: 2px solid var(--border); border-radius: 8px;
+    padding: 12px; position: relative;
+  }
+  .video {
+    aspect-ratio: 4 / 3; background: #111; padding: 0; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: flex-end;
+  }
+  .controls {
+    display: flex; align-items: center; gap: 10px;
+    background: #000c; padding: 8px 10px; color: #fff;
+  }
+  .bar { flex: 1; height: 6px; background: #555; border-radius: 3px; }
+  .bar::after { content: ""; display: block; width: 35%; height: 100%; background: var(--accent); border-radius: 3px; }
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gallery div {
+    aspect-ratio: 1; background: var(--ph); border-radius: 6px;
+    display: grid; place-items: center; color: var(--muted);
+  }
+  .attachments h4 { margin-bottom: 8px; }
+  .attachments li { list-style: none; padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .attachments li:last-child { border: 0; }
+  .attachments li::before { content: "📄 "; }
+  
+  @media (max-width: 760px) {
+    .header, .media { grid-template-columns: 1fr; }
+    .categories { text-align: left; }
+    .page { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <img src="Fauzan A.jpeg" alt="Foto Profil" class="photo">
+      <section class="info">
+        <h1>Muhammad Yasir Fauzan</h1>
+        <p>JL. TIONG NO.3B<br>Karet Kuningan<br>Setiabudi, Jakarta Selatan</p>
+        <dl>
+          <dt>Email:</dt><dd><a href="mailto:yasirfauzan17@gmail.com">yasirfauzan17@gmail.com</a></dd>
+          <dt>Nomor HP:</dt><dd>0856 9323 1939</dd>
+        </dl>
+      </section>
+
+      <aside class="categories">
+        <h3>Siapa Saya?</h3>
+        <ul><li>Mahasiswa</li><li>Teknik Informatika</li><li>STT TERPADU NURUL FIKRI</li><li>Angkatan 2026</li></ul>
+      </aside>
+    </header>
+
+    <section class="about">
+      <p>Saya merupakan seorang Mahasiswa di STT TERPADU NURUL FIKRI jurusan Teknik Informatika Angkatan tahun 2026 dengan target yang kuat untuk mendapatkan prestasi sebanyak-banyaknya di kampus.</p>
+            <p>Saya juga memiliki ketertarikan di bidang peminatan Cyber Security karena ingin mendalami serta memahami bagaimana cara berpikir seorang peretas dalam meretas suatu sistem, lalu saya juga akan mengikuti UKM NFSCC yang ada di kampus.</p>
+  
+    </section>
+
+    <section class="media">
+      <div class="box video">
+        <video width="100%" controls>
+          <source src="Video perkenalan.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="box gallery">
+        <div></div><div></div><div></div><div></div>
+      </div>
+
+      <div class="box attachments">
+        <h4>Daftar Praktikum</h4>
+        <ul>
+          <li><a href="/praktikummandiri01/kelompok_12_desainuiux_pemweb.html">Praktikum 1</a></li>
+          <li><a href="/praktikummandiri02/prak2_desainuiux_pemweb.html">Praktikum 2</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
